@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.1.1/marked.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="notes" class="notes">
+        <div class="notesHeader">
+            <div class="column">
+                <p>Category</p>
+            </div>
+            <div class="column">
+                <p>Created</p>
+            </div>
+            <div class="columnBig">
+                <p>Content</p>
+            </div>
+            <div class="column">
+                <p>Dates</p>
+            </div>
+        </div>
+        <div id="noteList" class="noteList">
+        </div>
+    </div>
+    <button class="add" id="add">
+        <i class="fas fa-plus"></i> Add note
+    </button>
+
+    <div id="archive" class="archive">
+        <div class="notesHeader">
+            <div class="column">
+                <p>Category</p>
+            </div>
+            <div class="column">
+                <p>Created</p>
+            </div>
+            <div class="columnBig">
+                <p>Content</p>
+            </div>
+            <div class="column">
+                <p>Dates</p>
+            </div>
+            <div class="column">
+                <h><b>ARCHIVE</b></h>
+            </div>
+        </div>
+        <div id="archiveList" class="archiveList">
+        </div>
+    </div>
+</body>
+
+</html>
