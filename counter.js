@@ -11,9 +11,9 @@ function catCounter(options,list){
 }
 
 function colConst(className,array){
-    let sumCol=`<div class="${className}"`;
-    array.forEach((e)=>{sumCol+=`<div><p>`+e+`</p></div>`});
-    sumCol+='</div>'
+    let sumCol=`<div class="column"><div class="${className}"`;
+    array.forEach((e)=>{sumCol+=`<p>`+e+`</p>`});
+    sumCol+='</div></div>'
     return sumCol;
 }
 

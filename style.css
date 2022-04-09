@@ -20,9 +20,46 @@ body {
     justify-content: flex-start;
     padding: 0.5rem;
     margin: 20px;
+    margin-bottom: 0px;
     height: 50px;    
     width: 900px;
 }
+
+.sumTableHeader {
+    background-color: #9cc1aa;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem;
+    margin: 20px;
+    margin-bottom: 0px;
+    margin-top: 40px;
+    height: 50px;    
+    width: 900px;
+}
+
+.sumTableHeader .column {
+    overflow: hidden;
+    height: 40px;
+    width: 300px;
+}
+
+.countTable{
+    background-color: #69c1a4;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction:row;
+    padding: 0.5rem;
+    margin: 20px;
+    margin-top: 0px;
+    height: auto;    
+    width: 900px;
+}
+
+.countTable .column{
+    overflow: hidden;       
+    width: 300px;
+}
+
 .notesHeader button {
     background-color: transparent;
     border: none;
@@ -49,6 +86,7 @@ body {
     justify-content: flex-start;
     padding: 0.5rem;
     margin: 20px;
+    margin-bottom: 0px;
     height: 50px;    
     width: 900px;
 }
@@ -94,7 +132,8 @@ body {
 .note {
     background-color: #fff;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 20px;    
+    margin-top: 0px;
     height: 40px;    
     width: 900px;
 }

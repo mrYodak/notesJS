@@ -1,12 +1,14 @@
 import {refreshCounter} from './counter.js';
 
-export function addNewNote(text,text2,options) {    
+export function addNewNote(text,catType,options) {    
     try{
     const noteEl = document.getElementById("noteList");
     const archiveEl = document.getElementById("archList");
     const dateCheck =/(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}/g;  
     let optionsCode=``;  
-    let text3="";  
+    let text3=text.match(dateCheck);
+    let dateMentioned="";
+    if (text3!=null) dateMentioned= text3.toString();
     options.forEach(element => optionsCode+=`<option value="`+element+`">`+element+`</option>`);
     const note = document.createElement("div");
     note.classList.add("note");
@@ -16,8 +18,8 @@ export function addNewNote(text,text2,options) {
     note.innerHTML = `
             <div class="tools"> 
                 <div class="column">               
-                <div class="category ${text2 ? "" : "hidden"}"></div>                
-                <select class="categoryIn ${text2 ? "hidden" : ""}">
+                <div class="category ${catType ? "" : "hidden"}"></div>                
+                <select class="categoryIn ${catType ? "hidden" : ""}">
                 <option disabled>Category</option>`+optionsCode+`
                 </select>
                 </div>
@@ -29,7 +31,7 @@ export function addNewNote(text,text2,options) {
                 <input class="contentIn ${text ? "hidden" : ""}"></input> 
                 </div>  
                 <div class="column">
-                <div class="contentDate ${text3}"></div> 
+                <div class="contentDate ${dateMentioned}"></div> 
                 </div>                         
                 <button class="edit"><i class="fas fa-edit"></i></button>
                 <button class="delete"}"><i class="fas fa-trash-alt"></i></button>
@@ -50,9 +52,9 @@ export function addNewNote(text,text2,options) {
 
     contentIn.value = text;
     content.innerHTML = marked(text);
-    contentDate.innerHTML = marked(text3);
-    categoryIn.value = text2;
-    category.innerHTML = marked(text2);
+    contentDate.innerHTML = marked(dateMentioned);
+    categoryIn.value = catType;
+    category.innerHTML = marked(catType);
 
     editBtn.addEventListener("click", () => {
         content.classList.toggle("hidden");
