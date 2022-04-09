@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.1.1/marked.min.js"></script>
-    <script src="script.js" defer></script>
+    <script type="module"  src="script.js" defer></script>
 </head>
 
 <body>
+    <button class="add" id="add">
+        <i class="fas fa-plus"></i> Add note
+    </button>
     <div id="notes" class="notes">
         <div class="notesHeader">
             <div class="column">
@@ -30,9 +33,9 @@
         <div id="noteList" class="noteList">
         </div>
     </div>
-    <button class="add" id="add">
-        <i class="fas fa-plus"></i> Add note
-    </button>
+    
+    <div class="sumTable" id="sumTable">        
+    </div>
 
     <div id="archive" class="archive">
         <div class="notesHeader">
@@ -52,7 +55,7 @@
                 <h><b>ARCHIVE</b></h>
             </div>
         </div>
-        <div id="archiveList" class="archiveList">
+        <div id="archList" class="archList">
         </div>
     </div>
 </body>
